@@ -37,6 +37,7 @@ const handleSubmitBtn = (event) => {
   
   const recipeName = forms.recipe.value;
   const imageUrl = forms.picture.value;
+  const author = forms.author.value;
   const level = forms.level.value;
   const timing = forms.time.value;
   const ingredient = forms.ingredient.value;
@@ -56,4 +57,12 @@ const handleSubmitBtn = (event) => {
 
   console.log(recipe);
 }
+
+// const ingredients = document.querySelector('.step');
+
+// for (let i = ) {
+
+// }
+
+
 form.addEventListener('submit', handleSubmitBtn);
