@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        section {
+          max-width: 20rem;
+          transform: translateX(100%);
+          background-color: aquamarine;
+          border: 1px solid;
+          border-radius: 10px;
+          padding: 3rem;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          margin-block-end: 1rem;
+        }
+
+        label {
+          font-size: 23px;
+          font-weight: 700;
+          margin-block-end: 10px;
+        }
+
+        input {
+          padding: 7px;
+        }
+
+        select {
+          padding: 7px;
+        }
+
+        button {
+          margin-block-start: 10px;
+        }
+      </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Onja CookBook</h1>
+      </header>
+      <main>
+        <form>
+          <div class="recipe">
+            <label for="recipe-name" class="recipe-name">What is your recepe name</label>
+            <input type="text" id="recipe-name">
+          </div>
+          <div class="image-URL">
+            <label for="picture">Picture of the result(URL)</label>
+            <input type="text" id="picture">
+          </div>
+          <div class="cook">
+            <label for="author">Who's cooking?</label>
+            <input type="text" id="author">
+          </div>
+
+          <div class="level">
+            <label for="difficulty">What the difficulty?</label>
+            <!-- <input type="text" id="difficulty"> -->
+            <select name="level" id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="difficult">Difficult</option>
+            </select>
+          </div>
+
+          <div class="time">
+            <label for="timing">How much does it take?</label>
+            <!-- <input type="text" id="timing"> -->
+            <select name="time" id="timing">
+              <option value="15">15m</option>
+              <option value="30">30min</option>
+              <option value="45">45min</option>
+              <option value="60">60min</option>
+            </select>
+          </div>
+
+          <div class="ingredient">
+            <label for="ingredients">ingredients</label>
+            <input type="text" id="ingredients">
+            <button class="ingredients-btn">Add a new ingredient to the list</button>
+          </div>
+
+          <div class="step">
+            <label for="steps">Steps</label>
+            <input type="text" id="steps">
+            <button class="step-btn">Add a new step to the list</button>
+          </div>
+        </form>
+      </main>
+    </section>
+  </body>
+</html>
