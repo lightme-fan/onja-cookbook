@@ -10,8 +10,7 @@ const stepBtn = form.querySelector('.step-btn');
 const handleIngredientBtn = (event) => {
   event.preventDefault();
   const newIngredient = `
-  <label for="ingredients"></label>
-  <input type="text" id="ingredients">
+  <input type="text" id="ingredients" name="ingredient">
   `
   const ingredient = document.querySelector('.ingredient');
   ingredient.insertAdjacentHTML('beforeend', newIngredient);
@@ -22,8 +21,7 @@ ingredientBtn.addEventListener('click', handleIngredientBtn);
 const handleStepBtn = (event) => {
   event.preventDefault();
   const newStep = `
-  <label for="steps"></label>
-  <input type="text" id="steps">
+  <input type="text" id="steps" name="step">
   `
   const step = document.querySelector('.step');
   step.insertAdjacentHTML('beforeend', newStep);
@@ -35,14 +33,27 @@ const handleSubmitBtn = (event) => {
   event.preventDefault();
   const forms = event.target;
   
+  // Grabbing all inputs
   const recipeName = forms.recipe.value;
   const imageUrl = forms.picture.value;
   const author = forms.author.value;
   const level = forms.level.value;
   const timing = forms.time.value;
-  const ingredient = forms.ingredient.value;
-  const step = forms.step.value;
 
+  const ingredient = document.querySelector('.ingredient');
+  for(let i = 0; i < ingredient.children.length; i++) {
+    const ingredientList = ingredient.children;
+    ingredientList[i] = form.ingredient.value;
+  }
+
+  const step = document.querySelector('.step');
+  for (let i = 0; i < step.children.length, i++;) {
+    const stepList = step.children;
+    stepList[i] = form.step.value;
+  }
+
+
+  // This is the recipe array
   const recipe = [
     {
       title: `${recipeName}`,
@@ -50,19 +61,27 @@ const handleSubmitBtn = (event) => {
       author: `${author}`,
       difficulty: `${level}`,
       timing: `${timing}`,
-      ingredients: `[${ingredient}]`,
-      steps: `[${step}]`
+      ingredients: `${ingredient}`,
+      steps: `${step}`
     },
   ];
 
   console.log(recipe);
 }
 
-// const ingredients = document.querySelector('.step');
-
-// for (let i = ) {
-
-// }
-
-
 form.addEventListener('submit', handleSubmitBtn);
+
+// function submitForms() {
+//   var forms = document.getElementsByTagName("form");
+//   var inputs;
+//   var tempResult = {};
+//   result = [];
+//   for (var i = 0; i < forms.length; i++) {
+//     inputs = forms[i].getElementsByTagName("input");
+//     tempResult = {};
+//     for (var j = 0; j < inputs.length; j++)
+//       tempResult[inputs[j].name] = inputs[j].value;
+//     result.push(tempResult);
+//   }
+//   console.log(result);
+// }
