@@ -68,7 +68,7 @@
         </div>
         <div class="image-URL">
           <label for="picture">Picture of the result(URL)</label>
-          <input type="text" id="picture" name="picture">
+          <input type="url" id="picture" name="picture">
         </div>
         <div class="cook">
           <label for="author">Who's cooking?</label>
@@ -89,27 +89,27 @@
           <label for="timing">How much does it take?</label>
           <!-- <input type="text" id="timing"> -->
           <select name="time" id="timing">
-            <option value="15">15m</option>
-            <option value="30">30min</option>
-            <option value="45">45min</option>
-            <option value="60">60min</option>
+            <option value="15"> Around 15min</option>
+            <option value="30">Around 30min</option>
+            <option value="45">Around 45min</option>
+            <option value="60">Around 1h</option>
           </select>
         </div>
 
         <div>
-          <div class="ingredient">
-            <label for="ingredients">ingredients</label>
-            <input type="text" id="ingredients" name="ingredient">
+          <label for="ingredient">ingredients</label>
+          <div class="ingredient" id="ingredient">
+            <input type="text" id="ingredient1" name="ingredient1">
           </div>
-          <button class="ingredients-btn">Add a new ingredient to the list</button>
+          <button type="button" class="ingredients-btn">Add a new ingredient to the list</button>
         </div>
 
         <div>
-          <div class="step">
-            <label for="steps">Steps</label>
-            <input type="text" id="steps" name="step">
+          <label for="step">Steps</label>
+          <div class="step" id="step">
+            <input type="text" id="step1" name="step1">
           </div>
-          <button class="step-btn">Add a new step to the list</button>
+          <button type="button" class="step-btn">Add a new step to the list</button>
         </div>
 
         <div class="submit">
